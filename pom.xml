@@ -19,17 +19,26 @@
     <parent>
         <groupId>org.apache.nifi</groupId>
         <artifactId>nifi-nar-bundles</artifactId>
-        <version>1.11.3</version>
+    <version>1.11.3</version>
     </parent>
 
-    <groupId>org.apache.nifi</groupId>
-    <artifactId>sampleadd</artifactId>
+    <groupId>com.hashmapinc.tempus</groupId>
+    <artifactId>sample-processor</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <modules>
-        <module>nifi-cusom-processors</module>
-        <module>nifi-cusom-nar</module>
+        <module>nifi-sample-processors</module>
+        <module>nifi-sample-nar</module>
+<module>nifi-sample</module>
+<module>nifi-sample-api</module>
     </modules>
-
-</project>
+		<dependencies>
+			<dependency>
+				<groupId>org.apache.nifi</groupId>
+    				<artifactId>nifi-standard-services-api-nar</artifactId>
+   				<version>1.11.3</version>
+    				<type>nar</type>
+			</dependency>
+		</dependencies>
+			</project>
