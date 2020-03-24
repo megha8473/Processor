@@ -63,7 +63,7 @@ public class PathReader extends AbstractControllerService implements MyService {
         props.add(OUTPUT);
 		//props.add(MY_NUM);
         properties = Collections.unmodifiableList(props);
-    }
+    //braces end 
     //public static final Relationship REL_SUCCESS = new Relationship.Builder().name("success").description("All files are routed to success").build();
     @Override
     protected List<PropertyDescriptor> getSupportedPropertyDescriptors() {
