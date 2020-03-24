@@ -36,7 +36,7 @@ import org.apache.nifi.reporting.InitializationException;
 
 @Tags({"file","path","input","filesystem","local","source","get"})
 @CapabilityDescription("This will take a file path named as OUTPUT. And that property then can be used by any other processor")
-public class PathReader extends AbstractControllerService implements MyService {
+public class PathReader extends AbstractControllerService{
 
     public static final PropertyDescriptor OUTPUT = new PropertyDescriptor
             .Builder().name("OUTPUT")
@@ -63,7 +63,7 @@ public class PathReader extends AbstractControllerService implements MyService {
         props.add(OUTPUT);
 		//props.add(MY_NUM);
         properties = Collections.unmodifiableList(props);
-    //braces end 
+    }
     //public static final Relationship REL_SUCCESS = new Relationship.Builder().name("success").description("All files are routed to success").build();
     @Override
     protected List<PropertyDescriptor> getSupportedPropertyDescriptors() {
